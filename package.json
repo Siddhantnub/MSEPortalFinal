@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run bddgen && npm run playwright-test",
+    "test": "npm run bddgen && npx playwright test --reporter=html,list",
+    "test:casecreation": "npm run bddgen && npx playwright test .features-gen/MAIN/features/MSEportalCreateCase.feature.spec.js --reporter=html,list",
+    "test:debug": "npm run bddgen && npx playwright test .features-gen/MAIN/features/MSEportalCreateCase.feature.spec.js --debug",
     "bddgen": "npx bddgen",
     "playwright-test": "npx playwright test --reporter=html,list"
   },
