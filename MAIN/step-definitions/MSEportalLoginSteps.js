@@ -51,10 +51,6 @@ When('I enter my password', async ({ page }) => {
             "ERROR: 'MSE_PASSWORD' environment variable is not set."
         );
     }
-
-    const passwordInput = page.locator('input[type="password"]');
-    await passwordInput.fill(password);
-    await passwordInput.press('Enter');
 });
 
 Then('I should reach the {string}', async ({ page }, expectedPath) => {
